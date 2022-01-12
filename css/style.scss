@@ -1,0 +1,193 @@
+// #242333, #FFFFFF, #01B0D3
+
+$color-number: hsl(0, 0%, 0%);
+
+$color-dark: hsl(244, 19%, 17%);
+$color-dark-hover: hsla(244, 19%, 22%, 1);
+
+$color-white: hsl(0, 0%, 100%);
+$color-white-hover: hsla(0, 0%, 100%, 0.93);
+$color-white-active: hsla(0, 0%, 100%, 0.85);
+
+$color-cyan: hsl(190, 99%, 42%);
+$color-cyan-hover: hsla(190,99%,42%, 0.94);
+$color-cyan-active: hsla(190,99%,42%, 0.85);
+
+$color-op: hsl(0, 0%, 96%);
+$color-lines: hsl(0, 0%, 90%);
+
+
+$calculator-height: 50vh;
+$calculator-width: 20vw;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: $color-dark;
+    height: 100vh;
+    // background: linear-gradient(to right, $color-dark-hover, $color-dark, $color-dark);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 3em 0em 3em;
+    max-width: 70em;
+    height: 95vh;
+    margin: 0 auto;
+}
+.calculator-container{
+    // margin: calc((95vh / 4)vh) auto 0 auto ;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+    min-height: $calculator-height;
+    // max-width: $calculator-width;
+    border: 10px solid $color-dark-hover;
+
+    button {
+        cursor: pointer;
+        font-size: 2rem;
+        outline: none;
+    }
+}
+.equal {
+    grid-row: span 2;
+}
+.output {
+    grid-column: 1 / -1;
+    background-color: $color-white;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    // overflow-x: scroll;
+    .previous-operand {
+        font-size: 1.1rem;
+        color: rgba(0, 0, 0, 0.7)
+    }
+    .current-operand {
+        font-size: 2rem;
+        color: $color-number;
+        // position: relative;
+    }
+}
+
+[data-operation] {
+    color: $color-cyan;
+    background-color: $color-op;
+    border: 1px solid $color-lines;
+
+    &:hover {
+        transition: 200ms linear;
+        background-color: $color-white-hover;
+    }
+    &:active {
+        background-color: $color-white-active;
+    }
+
+}
+
+[data-clear] {
+    color: $color-cyan;
+    background-color: $color-op;
+    border: 1px solid $color-lines;
+
+    &:hover {
+        transition: 200ms linear;
+        background-color: $color-white-hover;
+    }
+    &:active {
+        background-color: $color-white-active;
+    }
+}
+[data-delete] {
+    border: 1px solid $color-lines;
+    color: $color-cyan;
+    background-color: $color-op;
+
+    &:hover {
+        transition: 200ms linear;
+        background-color: $color-white-hover;
+    }
+    &:active {
+        background-color: $color-white-active;
+    }
+}
+[data-equals] {
+    background-color: $color-cyan;
+    color: $color-white;
+    border: 1px solid $color-cyan;
+    &:hover {
+        transition: 200ms linear;
+        background-color: $color-cyan-hover;
+    }
+    &:active {
+        background-color: $color-cyan-active;
+    }
+}
+[data-number] {
+    border: 1px solid $color-lines;
+    color: black;
+    background-color: $color-white;
+
+    &:hover {
+        background-color: $color-white-hover;
+        transition: 200ms linear;
+    }
+    &:active {
+        background-color: $color-white-active;
+    }
+}
+[data-square] {
+    border: 1px solid $color-lines;
+    background-color: $color-white;
+
+    &:hover {
+        transition: 200ms linear;
+        background-color: $color-white-hover;
+    }
+    &:active {
+        background-color: $color-white-active;
+    }
+}
+
+.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 5vh;
+    background: $color-dark-hover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    color: $color-white;
+    a {
+        color: $color-cyan;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            color: hsla(190, 99%, 42%, 0.8);
+            transition: 250ms linear;
+        }
+        &:active {
+            color: hsla(190, 99%, 42%, 0.5);
+        }
+    }
+}

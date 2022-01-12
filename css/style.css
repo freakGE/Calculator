@@ -1,0 +1,226 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #242334;
+  height: 100vh;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0em 3em 0em 3em;
+  max-width: 70em;
+  height: 95vh;
+  margin: 0 auto;
+}
+
+.calculator-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: minmax(120px, auto) (100px)[5];
+      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  min-height: 50vh;
+  border: 10px solid #2f2d43;
+}
+
+.calculator-container button {
+  cursor: pointer;
+  font-size: 2rem;
+  outline: none;
+}
+
+.equal {
+  grid-row: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+.output .previous-operand {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.output .current-operand {
+  font-size: 2rem;
+  color: black;
+}
+
+[data-operation] {
+  color: #01b2d5;
+  background-color: whitesmoke;
+  border: 1px solid #e6e6e6;
+}
+
+[data-operation]:hover {
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+[data-operation]:active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+[data-clear] {
+  color: #01b2d5;
+  background-color: whitesmoke;
+  border: 1px solid #e6e6e6;
+}
+
+[data-clear]:hover {
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+[data-clear]:active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+[data-delete] {
+  border: 1px solid #e6e6e6;
+  color: #01b2d5;
+  background-color: whitesmoke;
+}
+
+[data-delete]:hover {
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+[data-delete]:active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+[data-equals] {
+  background-color: #01b2d5;
+  color: white;
+  border: 1px solid #01b2d5;
+}
+
+[data-equals]:hover {
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+  background-color: rgba(1, 178, 213, 0.94);
+}
+
+[data-equals]:active {
+  background-color: rgba(1, 178, 213, 0.85);
+}
+
+[data-number] {
+  border: 1px solid #e6e6e6;
+  color: black;
+  background-color: white;
+}
+
+[data-number]:hover {
+  background-color: rgba(255, 255, 255, 0.93);
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+}
+
+[data-number]:active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+[data-square] {
+  border: 1px solid #e6e6e6;
+  background-color: white;
+}
+
+[data-square]:hover {
+  -webkit-transition: 200ms linear;
+  transition: 200ms linear;
+  background-color: rgba(255, 255, 255, 0.93);
+}
+
+[data-square]:active {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  height: 5vh;
+  background: #2f2d43;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.footer a {
+  color: #01b2d5;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: rgba(1, 178, 213, 0.8);
+  -webkit-transition: 250ms linear;
+  transition: 250ms linear;
+}
+
+.footer a:active {
+  color: rgba(1, 178, 213, 0.5);
+}
+/*# sourceMappingURL=style.css.map */
