@@ -191,3 +191,116 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 800px) { //420px
+    .calculator-container {
+        border: none;
+        border-bottom: 2.5vh solid $color-dark-hover;
+        min-width: 100vw;
+        height: 100vh;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: minmax(30%, auto) repeat(5, 14%);
+
+        button {
+            cursor: pointer;
+            font-size: 2.5rem; //2
+            outline: none;
+        }
+
+    }
+
+    .output {
+        .previous-operand {
+            font-size: 1.8rem; //1.1
+            color: rgba(0, 0, 0, 0.7)
+        }
+        .current-operand {
+            font-size: 3rem; //2
+            color: $color-number;
+        }
+    }
+}
+
+@media screen and (max-width: 810px), (max-height: 1080px) { //420px
+    .wrapper {
+        padding: 0em 0em 0em 0em;
+        max-width: auto;
+        height: 95vh;
+        margin: 0 auto;
+    }
+
+    .calculator-container {
+        min-width: 100vw;
+        height: 95vh;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: minmax(25%, auto) repeat(5, 15%);
+        button {
+            font-size: 3rem; //2
+        }
+
+    }
+    .output {
+        .previous-operand {
+            font-size: 2rem; //1.1
+        }
+        .current-operand {
+            font-size: 3.5rem; //2
+        }
+    }
+}
+
+@media screen and (max-width: 600px), (max-height: 926px) { //420px
+    .calculator-container {
+        height: 100vh;
+        button {
+            font-size: 2.5rem; //2
+        }
+    }
+    .output {
+        .previous-operand {
+            font-size: 1.8rem; //1.1
+        }
+        .current-operand {
+            font-size: 3rem; //2
+        }
+    }
+    // .footer {
+    //     background: blue;
+    //     .info {
+    //         background: red;
+    //     }
+    // }
+}
+
+@media screen and (max-width: 375px), (max-height: 812px) { //420px
+    .calculator-container {
+        button {
+            font-size: 2rem; //2
+        }
+    }
+    .output {
+        .previous-operand {
+            font-size: 1.5rem; //1.1
+        }
+        .current-operand {
+            font-size: 2.5rem; //2
+        }
+    }
+}
+
+
+@media screen and (max-width: 310px), (max-height: 655px) { //420px
+    .calculator-container {
+        button {
+            font-size: 1.8rem; //2
+        }
+    }
+    .output {
+        .previous-operand {
+            font-size: 1.3rem; //1.1
+        }
+        .current-operand {
+            font-size: 2.2rem; //2
+        }
+    }
+}

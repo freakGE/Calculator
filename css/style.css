@@ -223,4 +223,95 @@ body {
 .footer a:active {
   color: rgba(1, 178, 213, 0.5);
 }
+
+@media screen and (max-width: 800px) {
+  .calculator-container {
+    border: none;
+    border-bottom: 2.5vh solid #2f2d43;
+    min-width: 100vw;
+    height: 100vh;
+    -ms-grid-columns: (25%)[4];
+        grid-template-columns: repeat(4, 25%);
+    -ms-grid-rows: minmax(30%, auto) (14%)[5];
+        grid-template-rows: minmax(30%, auto) repeat(5, 14%);
+  }
+  .calculator-container button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    outline: none;
+  }
+  .output .previous-operand {
+    font-size: 1.8rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .output .current-operand {
+    font-size: 3rem;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 810px), (max-height: 1080px) {
+  .wrapper {
+    padding: 0em 0em 0em 0em;
+    max-width: auto;
+    height: 95vh;
+    margin: 0 auto;
+  }
+  .calculator-container {
+    min-width: 100vw;
+    height: 95vh;
+    -ms-grid-columns: (25%)[4];
+        grid-template-columns: repeat(4, 25%);
+    -ms-grid-rows: minmax(25%, auto) (15%)[5];
+        grid-template-rows: minmax(25%, auto) repeat(5, 15%);
+  }
+  .calculator-container button {
+    font-size: 3rem;
+  }
+  .output .previous-operand {
+    font-size: 2rem;
+  }
+  .output .current-operand {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 600px), (max-height: 926px) {
+  .calculator-container {
+    height: 100vh;
+  }
+  .calculator-container button {
+    font-size: 2.5rem;
+  }
+  .output .previous-operand {
+    font-size: 1.8rem;
+  }
+  .output .current-operand {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 375px), (max-height: 812px) {
+  .calculator-container button {
+    font-size: 2rem;
+  }
+  .output .previous-operand {
+    font-size: 1.5rem;
+  }
+  .output .current-operand {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 310px), (max-height: 655px) {
+  .calculator-container button {
+    font-size: 1.8rem;
+  }
+  .output .previous-operand {
+    font-size: 1.3rem;
+  }
+  .output .current-operand {
+    font-size: 2.2rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
