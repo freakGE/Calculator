@@ -50,7 +50,7 @@ body {
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 
-    min-height: $calculator-height;
+    // min-height: $calculator-height;
     // max-width: $calculator-width;
     border: 10px solid $color-dark-hover;
 
