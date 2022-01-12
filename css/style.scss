@@ -221,7 +221,7 @@ body {
     }
 }
 
-@media screen and (max-width: 810px), (max-height: 1080px) { //420px
+@media screen and (max-width: 810px) { //420px
     .wrapper {
         padding: 0em 0em 0em 0em;
         max-width: auto;
@@ -249,7 +249,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px), (max-height: 926px) { //420px
+@media screen and (max-width: 600px) { //420px
     .calculator-container {
         height: 100vh;
         button {
